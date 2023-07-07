@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Repository Finder</title>
+</head>
+<body>
+    <h1>GitHub Most Challenging Repository Finder</h1>
+    <form method="POST" action="/">
+        <label for="username">Enter GitHub username:</label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Search</button>
+    </form>
+    {% if result %}
+        <p>Repository Name: {{ result }}</p>
+        <p>Repository Link: <a href="{{ link }}">{{ link }}</a></p>
+    {% endif %}
+</body>
+</html>
+
