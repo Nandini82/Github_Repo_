@@ -21,7 +21,7 @@ def process():
 def git(accesstoken, username):
     g = Github(accesstoken)
     repos = fetch_user_repositories(username, accesstoken)
-    directory ="F:/Github_repo_mercor/"  # Replace with the desired directory path
+    directory ="./"  # Replace with the desired directory path
     ext = (".py", ".java", ".cpp", ".ipynb", ".md", ".json", ".js", ".html", ".css", ".htm", ".jar")
     columns = ["Name", "star", "forks", "repo_link"] + list(ext)
     df = pd.DataFrame(columns=columns)
